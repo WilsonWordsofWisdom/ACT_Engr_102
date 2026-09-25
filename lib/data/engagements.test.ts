@@ -32,7 +32,7 @@ describe("listEngagements", () => {
 describe("getEngagementById", () => {
   it("finds a seeded engagement", () => {
     const engagement = getEngagementById("eng-001");
-    expect(engagement?.clientName).toBe("Northfield Housing Authority");
+    expect(engagement?.clientName).toBe("Public Finance Bureau");
   });
 
   it("returns undefined for an unknown id", () => {
