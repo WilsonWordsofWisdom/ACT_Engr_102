@@ -29,7 +29,7 @@ starting point for each stage's prompt.
 | **Design** | Decide the UI interaction and its states (loading/empty/validation-error/success) before building it. Figma Make (`design/figma-make-prompt.md`) is optional and accelerates this — it never replaces it. | `docs/design.md` |
 | **Architecture** | Inspect the current code and explain which View, Controller and Data pieces must change. Propose the smallest plan and tests. Stop for approval before editing. | `docs/architecture.md` |
 | **Build** | Implement only the approved slice. Don't change unrelated behaviour. Explain the diff in plain English afterward. | code + `docs/decisions.md` |
-| **Verify** | Use `docs/tests/engagement-tracker.feature` as the behaviour reference. Run `npm run verify`. Test the happy path and at least one failure/validation path manually. | `docs/tests/` |
+| **Verify** | Report pass/fail **per scenario** in `docs/tests/engagement-tracker.feature`, each with evidence (automated test name, or manual steps + observation) — not a grab-bag of whatever got tested. Restart the dev server first for a clean state. End with an explicit "what remains unverified" list. This must look structurally different from Build's ad hoc checks, which test "does this piece work," not "does behaviour match the documented requirement." | `docs/tests/` |
 | **Harden** | Run `docs/security-checklist.md` in a **fresh** conversation, review-only — don't let the reviewer fix as it goes. Record findings before authorising any fix. | `docs/security-checklist.md` |
 | **Hand over** | Fill in `docs/HANDOVER.md` — intended vs. implemented behaviour, evidence, limitations, next step. | `docs/HANDOVER.md` |
 

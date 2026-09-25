@@ -6,6 +6,12 @@ Tracker**. Toolchain: VS Code + GitHub + Claude Code.
 > Working prototype only. Productionisation is handed to
 > engineering/platform owners — see `deploy/rabbitdeploy/README.md`.
 
+> This lab covers Discovery through Hand Over. It does **not** include a
+> Measure stage, even though the full ClaudeThisIsTheWay lifecycle has
+> one — a 90-minute first exposure session doesn't have room for
+> meaningful telemetry on a single bounded feature. Measure stays part
+> of the full lifecycle and is earmarked for a deeper follow-on module.
+
 ## Before you start
 
 - VS Code installed, can open a local folder.
@@ -77,14 +83,23 @@ reading the code.
   dependency changes and error exposure.
 - Record findings; only then authorise any remediation.
 
-## Module 6 — Prompting in Practice
+## Module 6 — Prompting in Practice (optional)
+
+Short on time? Skip straight to Wrap-up — the core lifecycle (Discovery
+through Hand Over) is already complete without this module. It
+practices a skill, not a new lifecycle stage.
 
 - Take the vague prompt "Add history to the tracker." Rewrite it with
   context, user, behaviour, constraints and proof — see
   `training/PROMPTS.md` for the pattern.
 - Ask Claude to inspect and plan before implementing anything.
 
-## Module 7 — Review & Debugging
+## Module 7 — Review & Debugging (optional)
+
+Short on time? Skip straight to Wrap-up. Like Module 6, this practices a
+skill (the doom-loop recovery move) rather than adding a lifecycle
+stage — worth doing if a real "stuck" moment came up earlier in the lab,
+otherwise safe to drop.
 
 - Use a fresh context to review the implementation and diff.
 - If something is stuck after two attempts, don't keep prompting the same
@@ -93,6 +108,8 @@ reading the code.
 - Re-run `npm run verify` after any fix.
 
 ## Wrap-up
+
+Follows Module 5 directly if Modules 6–7 were skipped.
 
 - Fill in `docs/HANDOVER.md`.
 - Be ready to explain: what changed, what was proven, what remains open.
