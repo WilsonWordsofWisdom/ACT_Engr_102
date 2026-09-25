@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 
 export const SESSION_COOKIE = "act_session";
 
-export const CONSULTANTS = ["Alex Rivera", "Priya Nathan", "Jordan Lee"] as const;
+export const CONSULTANTS = ["Daniel", "Nicole", "Reeve"] as const;
 export type Consultant = (typeof CONSULTANTS)[number];
 
 export function isConsultant(

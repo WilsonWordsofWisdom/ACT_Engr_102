@@ -16,7 +16,7 @@ describe("GET /api/engagements", () => {
 
   it("returns engagements for an authenticated consultant", async () => {
     const request = new NextRequest("http://localhost/api/engagements", {
-      headers: { cookie: "act_session=Alex%20Rivera" },
+      headers: { cookie: "act_session=Daniel" },
     });
     const response = await GET(request);
     expect(response.status).toBe(200);
