@@ -28,10 +28,21 @@ more than the exact words.
 > flow, and any assumptions in plain English.
 
 **Verify:**
-> Read docs/tests/engagement-tracker.feature. Run `npm run verify` and
-> the relevant manual checks. If a check fails, diagnose the root cause
-> before changing code. Report what passed, what failed, and what remains
-> unverified.
+> Read docs/tests/engagement-tracker.feature. Run `npm run verify`. For
+> each scenario in the feature file, report pass or fail on its own line
+> with specific evidence — the automated test name if one covers it, or
+> the manual steps taken and what was observed if not. Do not summarize
+> in aggregate. If a check fails, diagnose the root cause before changing
+> code. End with an explicit "what remains unverified" list — anything
+> not covered by a scenario above.
+
+Report one row per scenario, not a grab-bag of whatever got tested —
+that's what makes Verify's output visibly different from the ad hoc
+checks during Build, which test "does this piece I just wrote work"
+rather than "does behaviour match the documented requirement." Restart
+the dev server for a clean state before running this, and review the
+Build diff yourself before sending this prompt — Verify should feel like
+a distinct checkpoint, not Build continuing in the same breath.
 
 **Security review:**
 > Do not edit code. Review the latest diff for secrets, access-control
